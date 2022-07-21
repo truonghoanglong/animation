@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 100px;
+  height: 100px;
+}
+.blue {
+    background-color: blue;
+    /* transition-property: background-color,width;
+    transition-duration: 1s; */
+    /* transition-delay: 1s; */
+    /* transition-timing-function: ease-in-out; */
+    transition: all 1s ease-in-out;
+}
+.blue:hover {
+    width: 200px;
+  background-color: red;
+}
+
+
+.menu li{
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+
+.menu li::after{
+    content: " ";
+    width: 0;
+    height: 4px;
+    background-color:black;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: all 1s ease-in-out;
+}
+
+.menu li:hover::after{
+    width: 40px;
+}   
